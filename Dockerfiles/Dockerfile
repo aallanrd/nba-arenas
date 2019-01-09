@@ -14,11 +14,10 @@ WORKDIR /usr/src/app
 COPY . .
 
 #RUN ls
-#RUN apt install npm
 
 RUN npm set unsafe-perm true
 # Install
-RUN npm install
+RUN npm install --only=production
 
 
 EXPOSE 8080
